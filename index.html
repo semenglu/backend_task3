@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row my-5">
+        <a class="col btn btn-light btn-outline-secondary mx-5" href="tables.php" role="button">Таблицы</a>
+        <a class="col btn btn-light btn-outline-secondary mx-5" href="screenshots.html" role="button">Скриншоты</a>
+    </div>
+
+    <div class="container text-center">
+        <form action="connect.php" method="POST" class="order-md-1">
+            <p><a name="form"></a></p>
+            <label>
+                Поле для имени:<br />
+                <input name="name" placeholder="Имя" class="form-control" required/>
+            </label><br /><br />
+            <label>
+                Поле для email:<br />
+                <input name="email" value="test@example.com" type="email" class="form-control" required/>
+            </label><br /><br />
+            <label>
+                Поле для даты рождения:<br />
+                <input name="birth_date" value="2022-09-12" type="date" class="form-control" required/>
+            </label><br /><br />
+            Пол:<br />
+            <label><input type="radio" name="gender" value="m" required/>
+                Мужчина
+            </label>
+            <label><input type="radio" name="gender" value="f" required/>
+                Женщина
+            </label><br /><br />
+            Количество конечностей:<br />
+            <label><input type="radio" name="limbs" value="4" required/>
+                4
+            </label>
+            <label><input type="radio" name="limbs" value="6" required/>
+                6
+            </label>
+            <label><input type="radio" name="limbs" value="8" required/>
+                8
+            </label><br /><br />
+            <label>
+                Сверхспособности:<br />
+                <select name="superpowers[]" multiple="multiple" class="form-control" required>
+                    <option value="1">бессмертие</option>
+                    <option value="2">левитация</option>
+                    <option value="3">прохождение сквозь стены</option>
+                    <option value="4">телекинез</option>
+                </select>
+            </label><br /><br />
+            <label>
+                Биография:<br />
+                <textarea name="bio" placeholder="Введите информацию о себе" class="form-control"></textarea>
+            </label><br /><br />
+            <label><input type="checkbox" required/>
+                С контрактом ознакомлен(а)
+            </label><br /><br />
+            <button class="btn btn-outline-secondary">Отправить</button>
+        </form>
+    </div>
+</body>
+
+</html>
